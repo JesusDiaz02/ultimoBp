@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import GifApp from './components/GifApp';
 
 
 
 ReactDOM.render(
   
-    <App />,
+    <GifApp />,
     document.getElementById('root')
 );
 
-;
+
