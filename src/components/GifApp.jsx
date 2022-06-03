@@ -3,18 +3,18 @@ import AgregarBusqueda from './AgregarBusqueda';
 import GifContenedor from './GifContenedor';
 
 const GifApp = () =>{
-    const [valoresBusqueda, setValoresBusqueda] = useState(['pokemon']);
+    const [catergoriasBusqueda, setCategoriasBusqueda] = useState(['pokemon']);
     return (
         <>
         <div>Aplicacion de gifs</div>
-        <AgregarBusqueda setValoresBusqueda={setValoresBusqueda}/>
+        <AgregarBusqueda setCategoriasBusqueda={setCategoriasBusqueda}/>
         <hr/>
         <ol>
             {
-                valoresBusqueda.map(valoresBusqueda=>(
+                catergoriasBusqueda.map(categoriaBusqueda=>(
                     <GifContenedor
-                    key={valoresBusqueda}
-                    valorBusqueda={valoresBusqueda}/>
+                    key={categoriaBusqueda}
+                    valorBusqueda={categoriaBusqueda}/>
 
                 ))
             }
