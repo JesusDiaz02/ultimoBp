@@ -8,17 +8,15 @@ const GifContenedor = ({valorBusqueda}) => {
   return (
     <>
         <h3>{valorBusqueda}</h3>
-        {cargando && <p>Cargando</p>}
+        {cargando && <p className='animate__animated animate__bounceInUp'>Cargando</p>}
 
 
-        <div>
+        <div className='card-grid animate__animated animate__bounceInUp'>
             {
-                gifs.map(({id, title, url})=>(
+                gifs.map((gif)=>(
                     <GifItem
-                    key={id}
-                    id={id}
-                    title={title}
-                    url={url}></GifItem>
+                    key={gif.id}
+                    {... gif}/>
                 ))
             }
         </div>

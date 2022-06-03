@@ -9,15 +9,16 @@ export const useGEtGifs = (valorBusqueda) => {
     })
 
     useEffect(()=>{
+    setTimeout(()=>
         getGifs(valorBusqueda)
         .then(gifs => {
             setEstado({
                 gifs: gifs,
                 cargando: false
             });
-        })
+        }),3000)
 
-    })
+    }, [valorBusqueda])
 
     return estado;
 }
