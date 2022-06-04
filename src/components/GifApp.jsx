@@ -2,8 +2,8 @@ import React, { useState } from "react"
 import AgregarBusqueda from './AgregarBusqueda';
 import GifContenedor from './GifContenedor';
 
-const GifApp = () =>{
-    const [catergoriasBusqueda, setCategoriasBusqueda] = useState(['pokemon']);
+const GifApp = ({categorias=['pokemon']}) =>{
+    const [catergoriasBusqueda, setCategoriasBusqueda] = useState(categorias);
     return (
         <>
         <div>Aplicacion de gifs</div>

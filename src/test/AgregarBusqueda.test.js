@@ -26,7 +26,7 @@ describe('Pruebas en <AgregarCategoria/>',() => {
     test('debe llamar a la funcion setCategorias y limpiar la caja de texto', () =>{
         const setCategorias = jest.fn();
         const wrapper = shallow(<AgregarBusqueda setCategoriasBusqueda={setCategorias}/>)
-        const value = 'simpson';
+        const value = 'pokemon';
 
 
         wrapper.find('input').simulate('change', {target: {value}});
